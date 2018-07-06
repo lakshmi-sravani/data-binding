@@ -3,12 +3,12 @@
 </p>-->
 <div style="margin-left:5px">
 <form>
-  Name1111:<br><input type="text" name="name1" [(ngModel)]="name1"><br>
+  Name:<br><input type="text" name="name1" [(ngModel)]="name1"><br>
   Amount:<br><input type="text" name="name2" [(ngModel)]="name2"><br>
   <br>
 
   <button type="submit" style="background-color:forestgreen;padding:5px" (click)="add()"> Add </button>
-  <button type="submit" style="background-color:forestgreen;padding:5px" (click)="get()"> Delete </button>
+  <button type="submit" style="background-color:red;padding:5px" (click)="delete()"> Delete </button>
   
   <button type="reset" style="background-color:royalblue;padding:5px">clear</button>
 <!--<input type="" value="add" style="background-color:forestgreen;padding:5px" (click)="add()">-->
@@ -17,9 +17,9 @@
 <div class="row">
   <div class="column">
     <table>
-      <tr>
-        <td *ngFor="let item of items" (click)="item">{{item.name1}}-{{item.name2}}</td>
-      </tr>
+      <th>
+        <tr *ngFor="let item of items; let i=index" (click)="listen(item,i)">{{item.name1}}{{item.name2}}</tr>
+      </th>
     </table>
   </div>
 </div>
