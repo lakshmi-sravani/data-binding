@@ -1,0 +1,28 @@
+<!--<p>
+  shopping-list works!
+</p>-->
+<div style="margin-left:5px">
+<form>
+  Name1111:<br><input type="text" name="name1" [(ngModel)]="name1"><br>
+  Amount:<br><input type="text" name="name2" [(ngModel)]="name2"><br>
+  <br>
+
+  <button type="submit" style="background-color:forestgreen;padding:5px" (click)="add()"> Add </button>
+  <button type="submit" style="background-color:forestgreen;padding:5px" (click)="get()"> Delete </button>
+  
+  <button type="reset" style="background-color:royalblue;padding:5px">clear</button>
+<!--<input type="" value="add" style="background-color:forestgreen;padding:5px" (click)="add()">-->
+</form>
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <td *ngFor="let item of items" (click)="item">{{item.name1}}-{{item.name2}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+</div>
